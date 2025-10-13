@@ -15,6 +15,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          lfs: true
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install npm deps
+        run: npm ci
 
       - name: Setup Hugo (extended)
         uses: peaceiris/actions-hugo@v3
@@ -23,7 +33,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify
+        run: hugo --gc --minify
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
