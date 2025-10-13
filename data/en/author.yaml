@@ -6,15 +6,15 @@ greeting: "Hi, this is"
 image: "images/author/me.jpeg"
 # give your some contact information. they will be used in the footer
 contactInfo:
-  email: "ilop0612@gmail.com"
+  email: "ilop0624@gmail.com"
   phone: "+821041374431"
   github: whodeeboiiii
-  linkedin: ilop0624
 
 # some summary about what you do
 summary:
+  - I am a Researcher
   - I am a Developer
-  - I am a Devops
-  - I love servers
-  - I work on open-source projects
-  - I love to work with some fun projects
+  - I am a Student
+  - I love traveling
+  - I love photography
+  - I love music
