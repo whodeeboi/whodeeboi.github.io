@@ -26,24 +26,24 @@ buttons:
 # Give a summary of you each skill in the summary section.
 skills:
 - name: Python
-  logo: images/sections/skills/kubernetes.png
+  logo: images/sections/skills/python.png
   summary: "Capable of writing Python programs. Experienced in writing Python programs for data analysis and machine learning."
   categories: ["technical"]
   url: "https://kubernetes.io/"
 
 - name: Kotlin
-  logo: images/sections/skills/go.png
+  logo: images/sections/skills/kotlin.png
   summary: "Capable of Android development using Kotlin language. Experienced in UI creation with Jetpack Compose."
   categories: ["technical"]
   url: "https://golang.org/"
 
 - name: HTML/CSS/JavaScript
-  logo: images/sections/skills/cloud.png
+  logo: images/sections/skills/html.png
   summary: "Experienced with web development using HTML/CSS/JavaScript."
   categories: ["technical"]
 
 - name: R
-  logo: images/sections/skills/docker.svg
+  logo: images/sections/skills/r.png
   summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
   categories: ["technical"]
   url: "https://www.docker.com/"
