@@ -25,11 +25,6 @@ languages:
     languageName: English
     title: "Jehu Ahn's Portfolio"
     weight: 1
-  bn:
-    languageCode: bn
-    languageName: বাংলা
-    title: "Jehu Ahn's Portfolio"
-    weight: 2
 # default language for the content
 defaultContentLanguage: en
 
