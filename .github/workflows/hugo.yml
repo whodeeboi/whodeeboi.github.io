@@ -21,7 +21,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
-      
+
+      - name: Setup Hugo (extended)
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Update Hugo modules
+        run: hugo mod tidy
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -29,12 +38,11 @@ jobs:
 
       - name: Install npm deps
         run: npm ci
-
-      - name: Setup Hugo (extended)
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
+      
+      - name: Install node modules
+        run: |
+          hugo mod npm pack
+          npm install
       
       - name: Setup Go
         uses: actions/setup-go@v5
