@@ -15,8 +15,6 @@ buttons:
   filter: "all"
 - name: Technical
   filter: "technical"
-- name: Personal
-  filter: "personal"
 - name: Language
   filter: "language"
 - name: Others

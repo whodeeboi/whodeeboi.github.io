@@ -1,0 +1,17 @@
+heading: "Get in touch"
+items:
+  - label: "Email"
+    value: "ilop0624@gmail.com"
+    href: "mailto:ilop0624@gmail.com"
+    icon: "images/sections/contact/email.png"
+  - label: "GitHub"
+    value: "@whodeeboiiii"
+    href: "https://github.com/whodeeboiiii"
+    icon: "images/sections/contact/github.png"
+  - label: "Location"
+    value: "Seoul, KR"
+    icon: "images/sections/contact/location.png"
+form:
+  enable: true
+  action: ""   # optional (Formspree/Netlify/etc). Leave empty for now.
+  success: "Thanks—I'll reply soon."

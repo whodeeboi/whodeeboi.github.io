@@ -261,6 +261,11 @@ params:
     pagination:
        maxPostsPerPage: 12
 
+  menu:
+    main:
+      - name: "Contact"
+        url: "/contact/"
+        weight: 98
 
   # Provide footer configuration.
   footer:
