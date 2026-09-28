@@ -1,0 +1,15 @@
+/* Design C: feedback remains optional; content is always visible. */
+nav a { transition: background-color 160ms ease-out, color 160ms ease-out; }
+.work-item { transition: border-color 200ms ease-out, transform 200ms ease-out; }
+.link-arrow { transition: transform 180ms ease-out; }
+.work-item:focus-within { border-left-color: var(--color-accent); }
+a:focus-visible .link-arrow { transform: translate(2px, -2px); }
+@media (hover: hover) and (pointer: fine) {
+  .work-item:hover { border-left-color: var(--color-accent); transform: translateY(-2px); }
+  a:hover .link-arrow { transform: translate(2px, -2px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  nav a, .work-item, .link-arrow { transition: none; }
+  .work-item:hover, a:hover .link-arrow, a:focus-visible .link-arrow { transform: none; }
+}
+@media print { .work-item, .link-arrow { transform: none !important; } }

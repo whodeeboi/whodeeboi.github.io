@@ -1,0 +1,51 @@
+.brand { display: block; text-decoration: none; font-weight: 600; font-size: 20px; letter-spacing: -.02em; color: var(--color-text); margin-bottom: 36px; }
+.brand span { display: block; color: var(--color-muted); font-size: 12px; font-weight: 400; letter-spacing: 0; margin-top: 4px; }
+nav { display: flex; flex-direction: column; gap: 3px; }
+nav a { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-muted); padding: 9px 10px; border-radius: 5px; font-size: 14px; min-height: 44px; }
+.nav-number { font-size: 12px; font-variant-numeric: tabular-nums; }
+nav a[aria-current] { color: var(--color-accent); background: var(--color-tint); font-weight: 650; }
+nav a:hover, nav a:focus-visible { color: var(--color-accent); background: var(--color-tint); }
+.theme-control { display: none; margin-top: 32px; }
+html.enhanced .theme-control { display: block; }
+.theme-control label { font-size: 13px; color: var(--color-muted); display: block; margin-bottom: 5px; }
+.theme-control select { width: 100%; border: 1px solid var(--color-control-border); border-radius: 6px; padding: 7px 12px; }
+.sidebar-note { font-size: 12px; color: var(--color-muted); margin-top: 32px; }
+.menu-toggle { display: none; }
+html.enhanced .menu-toggle { display: block; }
+.eyebrow { color: var(--color-muted); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 13px; }
+.name-dot { color: var(--color-accent); }
+.hero-lead { font-size: 23px; line-height: 1.45; letter-spacing: -.025em; margin-top: 14px; }
+.role { margin-top: 20px; font-size: 14px; line-height: 1.65; }
+.role a { text-decoration: none; }
+.advisor { color: var(--color-muted); font-size: 13px; margin-top: 8px; }
+.profile-photo { width: 100%; height: 100%; object-fit: cover; }
+.profile-links { display: flex; gap: 8px 18px; flex-wrap: wrap; align-items: center; margin-top: 14px; font-size: 14px; }
+.profile-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.cv-unavailable { color: var(--color-muted); white-space: nowrap; }
+.small { font-size: 12px; }
+.intro { margin-top: 28px; max-width: 70ch; }
+.intro p:first-child { font-size: 19px; line-height: 1.65; letter-spacing: -.01em; }
+.intro p+p { color: var(--color-muted); }
+.interests { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 0; margin: 20px 0 0; list-style: none; color: var(--color-accent); font-size: 13px; }
+.section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-bottom: 1px solid var(--color-border); padding-bottom: 12px; margin-bottom: 24px; }
+.section-note { font-size: 13px; color: var(--color-muted); }
+.work-item { margin-bottom: 30px; padding: 8px 0 8px 18px; border-left: 2px solid var(--color-border); }
+.work-item:last-child { margin-bottom: 0; }
+.work-item__meta { color: var(--color-accent); font-size: 13px; margin-bottom: 8px; }
+.work-item__title { font-size: 20px; letter-spacing: -.015em; }
+.work-item__subtitle { color: var(--color-muted); font-size: 14px; margin-top: 5px; }
+.work-item__summary { margin-top: 12px; max-width: 72ch; }
+.authors { font-size: 14px; color: var(--color-muted); margin-top: 12px; }
+.authors strong { color: var(--color-text); font-weight: 600; }
+.status { display: inline-block; background: var(--color-tint); color: var(--color-accent); padding: 2px 7px; border-radius: 4px; margin-right: 6px; font-size: 12px; }
+.resource-links { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 10px; font-size: 14px; }
+.resource-links a { min-height: 44px; display: inline-flex; align-items: center; }
+.link-arrow { display: inline-block; margin-left: 4px; }
+.date { font-size: 13px; padding-top: 3px; }
+.timeline-item p { font-size: 14px; margin-top: 4px; }
+.timeline-item .date { margin-top: 0; }
+.institution { font-weight: 500; }
+.institution a { text-decoration: none; }
+.timeline-item h3 { font-size: 16px; }
+footer { border-top: 1px solid var(--color-border); padding: 24px 0 12px; font-size: 13px; color: var(--color-muted); }
+footer p { margin-top: 6px; }
