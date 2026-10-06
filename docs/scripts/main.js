@@ -1,6 +1,8 @@
 (() => {
   const root = document.documentElement;
-  const select = document.querySelector('#theme');
+  const themeButtons = [...document.querySelectorAll('[data-theme-choice]')];
+  const themeReset = document.querySelector('[data-theme-choice="system"]');
+  const themeStatus = document.querySelector('#theme-status');
   const button = document.querySelector('.menu-toggle');
   const sidebar = document.querySelector('.sidebar');
   const header = document.querySelector('.mobile-header');
@@ -9,13 +11,25 @@
   const sections = links.map(link => document.getElementById(link.hash.slice(1)));
   const mobile = matchMedia('(max-width: 1099px)');
 
-  select.value = root.dataset.theme || 'system';
-  select.addEventListener('change', () => {
-    const value = select.value;
+  // No data-theme attribute means CSS follows the operating system automatically.
+  function updateThemeControls() {
+    const choice = root.dataset.theme || 'system';
+    themeButtons.forEach(control => {
+      if (control !== themeReset) control.setAttribute('aria-pressed', String(control.dataset.themeChoice === choice));
+    });
+    themeReset.hidden = choice === 'system';
+    themeStatus.textContent = choice === 'system' ? 'Theme follows your system settings.' : `${choice === 'light' ? 'Light' : 'Dark'} theme selected.`;
+  }
+  themeButtons.forEach(control => control.addEventListener('click', () => {
+    const value = control.dataset.themeChoice;
+    // Move focus before hiding the reset control after a keyboard activation.
+    if (value === 'system' && document.activeElement === themeReset) themeButtons[0].focus();
     if (value === 'system') delete root.dataset.theme;
     else root.dataset.theme = value;
     try { localStorage.setItem('jehu-theme', value); } catch {}
-  });
+    updateThemeControls();
+  }));
+  updateThemeControls();
 
   function closeMenu(returnFocus = false) {
     sidebar.classList.remove('is-open');
@@ -75,13 +89,15 @@
   mobile.addEventListener('change', () => { closeMenu(); setOffset(); schedule(); });
   if ('ResizeObserver' in window) new ResizeObserver(() => { setOffset(); schedule(); }).observe(header);
 
-  const photo = document.querySelector('.profile-photo');
-  function hideMissingPhoto() {
-    photo.parentElement.hidden = true;
-    photo.closest('.profile').classList.add('no-photo');
-  }
-  photo.addEventListener('error', hideMissingPhoto);
-  if (photo.complete && !photo.naturalWidth) hideMissingPhoto();
+  // A missing image never leaves a broken-image box or an empty image column.
+  document.querySelectorAll('.profile-photo, .work-item__image img').forEach(photo => {
+    function hideMissingPhoto() {
+      photo.parentElement.hidden = true;
+      photo.closest('.profile')?.classList.add('no-photo');
+    }
+    photo.addEventListener('error', hideMissingPhoto);
+    if (photo.complete && !photo.naturalWidth) hideMissingPhoto();
+  });
 
   closeMenu();
   root.classList.add('enhanced');

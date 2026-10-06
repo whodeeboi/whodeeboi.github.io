@@ -1,33 +1,38 @@
-# hugo-toha.github.io
+# Jehu Ahn — Personal Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b1b93b02-f278-440b-ae1b-304e9f4c4ab5/deploy-status)](https://app.netlify.com/sites/toha/deploys) [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhugo-toha%2Fhugo-toha.github.io%2Fbadge%3Fref%3Dmain&style=flat)](https://actions-badge.atrox.dev/hugo-toha/hugo-toha.github.io/goto?ref=main) ![Repository Size](https://img.shields.io/github/repo-size/hugo-toha/hugo-toha.github.io) ![Contributor](https://img.shields.io/github/contributors/hugo-toha/hugo-toha.github.io) ![Last Commit](https://img.shields.io/github/last-commit/hugo-toha/hugo-toha.github.io) ![License](https://img.shields.io/github/license/hugo-toha/hugo-toha.github.io) ![Open Issues](https://img.shields.io/github/issues/hugo-toha/hugo-toha.github.io?color=important) ![Open Pull Requests](https://img.shields.io/github/issues-pr/hugo-toha/hugo-toha.github.io?color=yellowgreen) ![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fhugo-toha.github.io%2F) [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/b7cb60ab/hugo-toha.github.io)
+Jehu Ahn의 연구와 프로젝트를 소개하는 단일 페이지 웹사이트입니다.
+HTML, CSS, JavaScript만 사용하며 빌드나 패키지 설치가 필요하지 않습니다.
 
-An example hugo static site with Toha theme.
+- 사이트: https://whodeeboiiii.github.io/
+- 배포 소스: `website` 브랜치의 `/docs`
+- 직접 편집하는 방법: [EDITING.md](EDITING.md)
 
-Attributions:
-- <a href='https://www.freepik.com/vectors/business'>Business vector created by studiogstock - www.freepik.com</a>
+## 빠른 수정
 
+| 바꾸려는 내용 | 파일 |
+|---|---|
+| 소개, 링크, 뉴스, 논문, 프로젝트, 경력 | `docs/index.html` |
+| 색상, 전체 폭, 사진 크기, 섹션 간격 | `docs/styles/tokens.css` |
+| 구성 요소의 글자 크기·테두리·정렬 | `docs/styles/components.css` |
+| 사이드바·모바일 배치 | `docs/styles/layout.css` |
+| 이미지 | `docs/assets/images/` |
 
-## Requirements
+이미지는 폴더에 넣은 뒤 `index.html`의 해당 항목에서 준비된 `<figure>` 예제의 주석을 해제합니다. 자세한 예제와 파일별 역할은 편집 가이드에 있습니다.
 
-We use [jdx/mise](https://github.com/jdx/mise) to manage dependencies. Mise takes care of installing `hugo`, `go`, `nodes` and other tools to appropriate versions. Please, install it following the instruction from [here](https://mise.jdx.dev/getting-started.html).
+## 로컬 미리보기
 
-## Running Locally
-- Install dependencies
-```
-mise install
-```
-- Run hugo server
-```
-mise run server
+`docs/index.html`을 브라우저에서 열거나, 저장소 루트에서 다음 명령을 실행합니다.
+
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 ```
 
-## Updating theme
-- To update theme to latest release, run:
-```
-mise run update
-```
-- To update theme to latest commit from `main` brnach, run:
-```
-mise run update-to-main
-```
+브라우저에서 http://127.0.0.1:8000 을 엽니다. 종료는 터미널에서 `Ctrl+C`입니다.
+VS Code Live Server를 사용하는 경우 `docs/index.html`에서 실행해도 됩니다.
+
+## GitHub Pages
+
+Settings → Pages → Deploy from a branch → `website` / `/docs`.
+로컬 수정은 커밋 후 `website`에 푸시해야 배포됩니다. `docs/.nojekyll`을 유지하세요.
+
+루트의 `LICENSE`에는 기존 저장소의 라이선스 고지가 보존되어 있습니다.
