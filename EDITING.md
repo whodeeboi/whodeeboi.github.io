@@ -96,7 +96,6 @@ CV 링크는 **모바일 상단과 About에 총 2곳** 있습니다. CV 파일�
 | pictrace | `assets/images/projects/pictrace.webp` |
 | moodyjam | `assets/images/projects/moodyjam.webp` |
 | forgetaboutit | `assets/images/projects/forgetaboutit.webp` |
-| shapeshifter | `assets/images/projects/shapeshifter.webp` |
 | context-aware-music | `assets/images/projects/context-aware-music.webp` |
 
 이미지가 주석 안에 있으면 요청하지 않고 공간도 차지하지 않습니다. 활성화하면 데스크톱은 이미지 왼쪽/텍스트 오른쪽, 699px 이하에서는 이미지 위/텍스트 아래가 됩니다. CSS나 JavaScript를 추가로 수정할 필요가 없습니다. JavaScript가 실행되는 환경에서는 파일 경로가 잘못된 이미지 영역을 숨깁니다. 이미지가 안 보이면 먼저 파일명·확장자·주석 여부를 확인하세요.
