@@ -15,8 +15,8 @@ docs/
     icons.svg                     브라우저 탭 아이콘
     images/
       profile.jpg                 프로필 사진
-      publications/               논문 이미지 (처음에는 비어 있음)
-      projects/                   프로젝트 이미지 (처음에는 비어 있음)
+      publications/               논문 이미지
+      projects/                   프로젝트 이미지
   styles/
     tokens.css                    자주 바꾸는 색상·크기·간격 변수
     base.css                      기본 서체·제목·링크·접근성·인쇄 스타일
@@ -43,6 +43,7 @@ CSS는 위 순서대로 불러옵니다. 같은 속성이 겹치면 선택자의
 | `class="interests"` | 초록색 연구 관심사 3개 |
 | `id="news"` | 소식 목록 |
 | `id="saluschart"` | SalusChart 논문 |
+| `id="current-research"` | 진행 중인 연구를 한 줄씩 소개하는 목록 |
 | `id="flect"` 등 | 해당 프로젝트 |
 | `id="experience"` | Research / Additional Experience |
 | `id="education"` | 학력 |
@@ -65,42 +66,39 @@ CV 링크는 **모바일 상단과 About에 총 2곳** 있습니다. CV 파일�
 
 ### SalusChart 예제
 
-1. `docs/assets/images/publications/saluschart.webp`에 실제 이미지를 넣습니다.
-2. `docs/index.html`에서 `id="saluschart"`를 검색합니다.
-3. 바로 아래 `<!-- Optional image: ...`부터 `-->`까지의 주석을 다음 활성 HTML로 교체합니다. 설명 문장과 `<!--`, `-->`는 남기지 않습니다.
+SalusChart는 논문 Figure 1을 표시합니다. 이미지를 바꾸려면 `docs/assets/images/publications/saluschart.webp`를 교체하고, `docs/index.html`의 `id="saluschart"` 아래에서 `src`, 확대 링크의 `href`, `alt`, 이미지 크기를 맞춥니다. 새 항목에도 같은 구조를 사용할 수 있습니다.
 
 ```html
 <figure class="work-item__image">
-  <img
-    src="assets/images/publications/saluschart.webp"
-    alt="SalusChart의 모바일 건강 데이터 차트 예시"
-    width="800"
-    height="600"
-    loading="lazy"
-    decoding="async">
+  <a href="assets/images/publications/saluschart.webp" aria-label="Enlarge SalusChart Figure 1">
+    <img
+      src="assets/images/publications/saluschart.webp"
+      alt="SalusChart recreations of Samsung Health and Apple Health dashboards, with heart rate and sleep charts."
+      width="1206"
+      height="526"
+      loading="lazy"
+      decoding="async">
+  </a>
 </figure>
 ```
 
-영어 사이트이므로 실제 `alt`는 이미지 내용을 설명하는 영어로 작성하세요. 위 설명은 이해를 위한 예시입니다. 파일이 PNG면 `src`도 `saluschart.png`로 수정합니다. `width`와 `height`는 원본 이미지의 실제 픽셀 크기로 맞추세요.
+영어 사이트이므로 `alt`에 이미지 내용을 영어로 설명하세요. 파일이 PNG면 `src`와 확대 링크의 `href`를 `saluschart.png`에 맞추고, `width`와 `height`에는 실제 픽셀 크기를 적습니다.
 
 **경로 기준은 `index.html`이 있는 docs 폴더입니다.** 따라서 HTML에는 `docs/assets/...`나 `/Users/...`가 아니라 `assets/...`를 씁니다. 대소문자도 실제 파일과 정확히 맞춰야 합니다.
 
 ### 프로젝트 이미지
 
-모든 프로젝트에 같은 주석 예제가 준비되어 있습니다.
+Flect와 ForgetAboutIt도 각각 논문 Figure 1을 표시합니다.
 
-| 항목 ID | 준비된 파일 경로 (docs 기준) |
+| 항목 ID | 이미지 경로 (docs 기준) |
 |---|---|
 | saluschart | `assets/images/publications/saluschart.webp` |
 | flect | `assets/images/projects/flect.webp` |
-| pictrace | `assets/images/projects/pictrace.webp` |
-| moodyjam | `assets/images/projects/moodyjam.webp` |
 | forgetaboutit | `assets/images/projects/forgetaboutit.webp` |
-| context-aware-music | `assets/images/projects/context-aware-music.webp` |
 
-이미지가 주석 안에 있으면 요청하지 않고 공간도 차지하지 않습니다. 활성화하면 데스크톱은 이미지 왼쪽/텍스트 오른쪽, 699px 이하에서는 이미지 위/텍스트 아래가 됩니다. CSS나 JavaScript를 추가로 수정할 필요가 없습니다. JavaScript가 실행되는 환경에서는 파일 경로가 잘못된 이미지 영역을 숨깁니다. 이미지가 안 보이면 먼저 파일명·확장자·주석 여부를 확인하세요.
+데스크톱은 이미지가 왼쪽에, 699px 이하에서는 이미지가 설명 위에 표시됩니다. 이미지를 누르면 원본 크기로 열립니다. JavaScript가 실행되는 환경에서는 파일 경로가 잘못된 이미지 영역을 숨깁니다. 이미지가 안 보이면 먼저 파일명과 확장자를 확인하세요.
 
-기본 이미지 틀은 4:3이며 `object-fit: contain`으로 그림 전체를 보여줍니다. 논문 그림이 잘리지 않도록 한 설정입니다. 썸네일은 가로 800–1200px 정도면 충분하며, 가능하면 용량을 줄여 업로드하세요. 이미지가 아직 없으면 주석 상태를 유지하면 됩니다. `.gitkeep`은 Git에 빈 폴더를 보존하기 위한 빈 파일입니다.
+이미지는 원본 비율로 표시됩니다. 썸네일은 가로 800–1400px 정도로 준비하고 WebP 등으로 용량을 줄이세요. 이미지가 없는 항목은 `figure` 없이 작성하면 됩니다.
 
 ## 4. 새 프로젝트 또는 논문 추가
 
@@ -164,7 +162,7 @@ CV 링크는 **모바일 상단과 About에 총 2곳** 있습니다. CV 파일�
 | `--profile-size` | `240px` | 큰 화면 프로필 사진 크기 |
 | `--profile-size-mobile` | `168px` | 699px 이하 사진 크기 |
 | `--interest-size` | `19px` | 큰 화면 연구 키워드; 모바일은 layout.css에서 18px |
-| `--work-image-width` | `200px` | 데스크톱 작업 썸네일 폭 |
+| `--work-image-width` | `248px` | 데스크톱 작업 썸네일 폭 |
 | `--work-gap` | `26px` | 썸네일과 설명 사이 |
 | `--radius` | `10px` | 사진·썸네일 모서리 |
 

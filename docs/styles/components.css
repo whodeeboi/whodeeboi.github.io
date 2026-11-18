@@ -36,8 +36,9 @@ html.enhanced .menu-toggle { display: block; }
 /* A commented-out image has no layout footprint. Uncommenting its figure adds a column. */
 .work-item { display: flex; align-items: flex-start; gap: var(--work-gap); padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--color-border); }
 .work-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
-.work-item__image { flex: 0 0 var(--work-image-width); width: var(--work-image-width); margin: 4px 0 0; aspect-ratio: 4 / 3; padding: 6px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; }
-.work-item__image img { width: 100%; height: 100%; object-fit: contain; }
+.work-item__image { flex: 0 0 var(--work-image-width); width: var(--work-image-width); margin: 4px 0 0; padding: 6px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); }
+.work-item__image a { display: block; }
+.work-item__image img { width: 100%; }
 .work-item__body { flex: 1; min-width: 0; }
 .work-item__title { font-size: 20px; line-height: 1.45; letter-spacing: -.015em; }
 .work-item__subtitle { color: var(--color-muted); font-size: 14px; margin-top: 7px; }
@@ -45,7 +46,6 @@ html.enhanced .menu-toggle { display: block; }
 .work-item__summary { margin-top: 12px; max-width: 72ch; }
 .authors { font-size: 14px; color: var(--color-muted); margin-top: 12px; }
 .authors strong { color: var(--color-text); font-weight: 600; }
-.status { display: inline-block; background: var(--color-tint); color: var(--color-accent); padding: 2px 7px; border-radius: 4px; margin-right: 6px; font-size: 12px; }
 .resource-links { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 10px; font-size: 14px; }
 .resource-links a { min-height: 44px; display: inline-flex; align-items: center; }
 .link-arrow { display: inline-block; margin-left: 4px; }

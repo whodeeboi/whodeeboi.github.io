@@ -3,7 +3,7 @@
 Jehu Ahn의 연구와 프로젝트를 소개하는 단일 페이지 웹사이트입니다.
 HTML, CSS, JavaScript만 사용하며 빌드나 패키지 설치가 필요하지 않습니다.
 
-- 사이트: https://whodeeboiiii.github.io/
+- 사이트: https://whodeeboi.github.io/
 - 배포 소스: `website` 브랜치의 `/docs`
 - 직접 편집하는 방법: [EDITING.md](EDITING.md)
 
@@ -17,7 +17,7 @@ HTML, CSS, JavaScript만 사용하며 빌드나 패키지 설치가 필요하지
 | 사이드바·모바일 배치 | `docs/styles/layout.css` |
 | 이미지 | `docs/assets/images/` |
 
-이미지는 폴더에 넣은 뒤 `index.html`의 해당 항목에서 준비된 `<figure>` 예제의 주석을 해제합니다. 자세한 예제와 파일별 역할은 편집 가이드에 있습니다.
+이미지는 폴더에 넣은 뒤 `index.html`의 해당 항목에서 `<figure>`를 추가하거나 수정합니다. 자세한 예제와 파일별 역할은 편집 가이드에 있습니다.
 
 ## 로컬 미리보기
 
