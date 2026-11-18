@@ -43,7 +43,7 @@ CSS는 위 순서대로 불러옵니다. 같은 속성이 겹치면 선택자의
 | `class="interests"` | 초록색 연구 관심사 3개 |
 | `id="news"` | 소식 목록 |
 | `id="saluschart"` | SalusChart 논문 |
-| `id="current-research"` | 진행 중인 연구를 한 줄씩 소개하는 목록 |
+| `id="current-research"` | 진행 중인 연구의 주제와 설명 |
 | `id="flect"` 등 | 해당 프로젝트 |
 | `id="experience"` | Research / Additional Experience |
 | `id="education"` | 학력 |

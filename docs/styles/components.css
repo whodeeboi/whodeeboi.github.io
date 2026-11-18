@@ -33,6 +33,9 @@ html.enhanced .menu-toggle { display: block; }
 .news-item { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 20px; }
 .news-item + .news-item { margin-top: 12px; }
 .news-item time { color: var(--color-muted); font-size: 14px; font-variant-numeric: tabular-nums; padding-top: 2px; }
+.research-list { margin: 0; padding: 0; list-style: none; }
+.research-list li + li { border-top: 1px solid var(--color-border); margin-top: 18px; padding-top: 18px; }
+.research-list p { margin-top: 6px; max-width: 70ch; }
 /* A commented-out image has no layout footprint. Uncommenting its figure adds a column. */
 .work-item { display: flex; align-items: flex-start; gap: var(--work-gap); padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--color-border); }
 .work-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
