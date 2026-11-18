@@ -4,7 +4,7 @@
   const themeReset = document.querySelector('[data-theme-choice="system"]');
   const themeStatus = document.querySelector('#theme-status');
   const button = document.querySelector('.menu-toggle');
-  const sidebar = document.querySelector('.sidebar');
+  const sidebar = document.querySelector('.sidebar-menu');
   const header = document.querySelector('.mobile-header');
   const nav = document.querySelector('#section-nav');
   const links = [...nav.querySelectorAll('a')];

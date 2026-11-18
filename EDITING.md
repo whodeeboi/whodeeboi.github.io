@@ -41,7 +41,7 @@ CSS는 위 순서대로 불러옵니다. 같은 속성이 겹치면 선택자의
 | `id="section-nav"` | 목차와 번호 |
 | `id="about"` | 이름·직책·소속·연락처·사진·관심사·소개 |
 | `class="interests"` | 초록색 연구 관심사 3개 |
-| `id="news"` | 소식 목록 |
+| `id="news"` | 데스크톱 왼쪽 사이드바와 모바일 헤더 아래의 소식 목록 |
 | `id="saluschart"` | SalusChart 논문 |
 | `id="current-research"` | 진행 중인 연구의 주제와 설명 |
 | `id="flect"` 등 | 해당 프로젝트 |
@@ -155,8 +155,8 @@ Flect와 ForgetAboutIt도 각각 논문 Figure 1을 표시합니다.
 | `--color-accent` | `#366348` | 초록색 링크·연구 관심사·타임라인 점 |
 | `--color-tint` | `#edf3e9` | 프로필 배경·현재 목차·선택 버튼 배경 |
 | `--space-section` | `52px` | 섹션 사이 간격; 1099px 이하에서는 44px |
-| `--site-width` | `1168px` | 전체 사이트 최대 폭(외부 여백 포함) |
-| `--sidebar-width` | `152px` | 데스크톱 목차 폭 |
+| `--site-width` | `1212px` | 전체 사이트 최대 폭(외부 여백 포함) |
+| `--sidebar-width` | `196px` | 데스크톱 목차와 News 영역 폭 |
 | `--column-gap` | `52px` | 사이드바와 본문 사이 |
 | `--content-width` | `860px` | 본문 최대 폭 |
 | `--profile-size` | `240px` | 큰 화면 프로필 사진 크기 |
